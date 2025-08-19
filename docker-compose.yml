@@ -1,0 +1,21 @@
+version: '2'
+
+networks:
+  academynetwork:
+    driver: bridge
+
+services:
+  jenkins:
+    build:
+        dockerfile: Dockerfile
+        context: ./jenkins
+    image: 'jenkins/jenkins:homemade'
+    privileged: true
+    user: root
+    ports:
+     - 8780:8080
+    container_name: jenkins
+    networks:
+      - academynetwork
+    volumes:
+     - /var/run/docker.sock:/var/run/docker.sock
