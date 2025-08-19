@@ -8,8 +8,8 @@ services:
   jenkins:
     build:
         dockerfile: Dockerfile
-        context: ./jenkins
-    image: 'jenkins/jenkins:homemade'
+        context: ./academy-2025
+    # image: 'jenkins/jenkins:homemade'
     privileged: true
     user: root
     ports:
