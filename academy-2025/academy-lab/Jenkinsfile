@@ -13,7 +13,7 @@ pipeline {
                 echo "Building.."
                 sh '''
                 ls -ltr
-                cd capjenkins2025/academy-2025/academy-lab/my_first_app
+                cd academy-2025/academy-lab/my_first_app
                 pip install -r requirements.txt
                 '''
             }
@@ -22,7 +22,7 @@ pipeline {
             steps {
                 echo "Testing.."
                 sh '''
-                cd capjenkins2025/academy-2025/academy-lab/my_first_app
+                cd academy-2025/academy-lab/my_first_app
                 python3 hello.py
                 python3 hello.py --name=Brad
                 '''
